@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Olist e-commerce analytics portfolio project by Fernanda Adekeu Alif"
+  >
+
+  <title>Olist E-Commerce Analytics | Fernanda Adekeu Alif</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script
+    type="module"
+    src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+  </script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">BUSINESS INTELLIGENCE PORTFOLIO PROJECT</p>
+
+      <h1>Olist E-Commerce Analytics</h1>
+
+      <p class="intro">
+        I built this project to explore sales performance, customer reach,
+        delivery reliability, customer reviews, product categories, and
+        freight costs using the public Olist e-commerce dataset.
+      </p>
+
+      <p class="period">
+        Data period: September 2016–October 2018
+      </p>
+
+      <nav aria-label="Project links">
+        <a
+          class="button"
+          href="https://github.com/dekeu/olist-ecommerce-bi-portfolio"
+          target="_blank"
+          rel="noopener noreferrer">
+          View GitHub Repository
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://www.linkedin.com/in/adekeu-alif/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Connect on LinkedIn
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>About the Project</h2>
+
+      <p>
+        I started with six raw CSV files, checked and transformed the data
+        using DuckDB and SQL, and created separate order-level and item-level
+        datasets. I then used those datasets to build three interactive
+        dashboards in Tableau Public.
+      </p>
+    </section>
+
+    <section>
+      <h2>Business Questions</h2>
+
+      <ul>
+        <li>How did delivered GMV change over time?</li>
+        <li>Which states contributed the most delivered GMV?</li>
+        <li>How many delivered orders arrived on time?</li>
+        <li>Did late deliveries receive lower customer reviews?</li>
+        <li>Which product categories generated the most value?</li>
+        <li>Which categories experienced greater freight pressure?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Interactive Dashboard</h2>
+
+      <p>
+        Use the dashboard tabs and filters to explore the Executive Overview,
+        Delivery and Customer Experience, and Product Performance pages.
+      </p>
+
+      <div class="dashboard-frame">
+        <tableau-viz
+          id="tableau-viz"
+          src="https://public.tableau.com/views/olist_ecommerce_analytics_17882571819230/1-ExecutiveOverview"
+          width="100%"
+          height="820px"
+          toolbar="bottom">
+        </tableau-viz>
+      </div>
+
+      <p class="dashboard-link">
+        If the dashboard does not load,
+        <a
+          href="https://public.tableau.com/views/olist_ecommerce_analytics_17882571819230/1-ExecutiveOverview"
+          target="_blank"
+          rel="noopener noreferrer">
+          open it directly in Tableau Public
+        </a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Findings</h2>
+
+      <div class="cards">
+        <article>
+          <h3>Sales</h3>
+
+          <p>
+            Delivered orders generated approximately <strong>$13.22M in
+            GMV</strong>. São Paulo contributed around <strong>$5.07M</strong>,
+            or approximately <strong>38% of the total</strong>.
+          </p>
+        </article>
+
+        <article>
+          <h3>Delivery and Experience</h3>
+
+          <p>
+            Approximately <strong>91.9% of delivered orders arrived on
+            time</strong>. On-time orders received an average review score
+            of <strong>4.3</strong>, compared with <strong>2.6</strong>
+            for late orders.
+          </p>
+        </article>
+
+        <article>
+          <h3>Freight Pressure</h3>
+
+          <p>
+            Among the leading categories by GMV, furniture décor had a
+            freight-to-GMV ratio of approximately <strong>23.7%</strong>,
+            followed by housewares at <strong>23.2%</strong>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I Built It</h2>
+
+      <ol>
+        <li>Loaded six public Olist CSV files into DuckDB.</li>
+        <li>Checked row counts, keys, missing values, statuses, and dates.</li>
+        <li>Built order-level and item-level analysis tables using SQL.</li>
+        <li>Exported the processed data for Tableau.</li>
+        <li>Created and published three interactive dashboards.</li>
+        <li>Documented the process, findings, and limitations on GitHub.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+
+      <p>
+        The dataset is historical and includes partial years. GMV represents
+        product value rather than company revenue or profit. Relationships
+        found in the data also do not automatically prove cause and effect.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Fernanda Adekeu Alif
+    </div>
+  </footer>
+</body>
+</html>
